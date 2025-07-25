@@ -1,45 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #fff8f0;
-    padding: 50px;
-  }
-  
-  h1 {
-    color: #ff7b54;
-  }
-  
-  .slot-machine {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
-  
-  .slot {
-    width: 120px;
-    height: 120px;
-    margin: 0 10px;
-    background: #fff;
-    border: 3px solid #ff7b54;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: all 0.3s;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #ff7b54;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #ff5722;
-  }
-  
+console.log("JS loaded");
+
+const ingredients = ["可樂", "啤酒", "牛奶", "果汁", "巧克力", "薯片", "香蕉", "草莓", "餅乾", "綠茶"];
+
+document.getElementById('spinBtn').addEventListener('click', () => {
+  console.log("Button clicked");
+  const slot1 = document.getElementById('slot1');
+  const slot2 = document.getElementById('slot2');
+  const result = document.getElementById('result');
+
+  slot1.textContent = "?";
+  slot2.textContent = "?";
+  result.textContent = "";
+
+  setTimeout(() => {
+    const ing1 = ingredients[Math.floor(Math.random() * ingredients.length)];
+    const ing2 = ingredients[Math.floor(Math.random() * ingredients.length)];
+
+    slot1.textContent = ing1;
+    slot2.textContent = ing2;
+
+    result.textContent = `你的調酒：${ing1} + ${ing2}！`;
+  }, 500);
+});
