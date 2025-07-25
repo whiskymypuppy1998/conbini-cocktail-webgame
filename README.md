@@ -1,5 +1,5 @@
+(Version 1.0.0)
 # 🍹 便利商店調酒遊戲 
-
 A fun web game where players mix random convenience store ingredients to create cocktails.  
 Built with **HTML, CSS, JavaScript**.
 
