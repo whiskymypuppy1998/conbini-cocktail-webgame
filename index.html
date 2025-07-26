@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conbini Cocktail Challenge</title>
-  <!-- 加上版本號防止快取 -->
-  <link rel="stylesheet" href="style.css?v=1.1">
+  <title>便利商店調酒遊戲</title>
+  <link rel="stylesheet" href="style.css?v=1.2.1">
 </head>
 <body>
-  <h1>🍹Conbini Cocktail Challenge🍹</h1>
-  <div class="slot-machine">
-    <div class="slot" id="slot1">?</div>
-    <div class="slot" id="slot2">?</div>
+  <h1>便利商店調酒遊戲</h1>
+  <div class="slot-container">
+    <div class="slot" id="slot1">❓</div>
+    <div class="slot" id="slot2">❓</div>
   </div>
-  <button id="spinBtn">抽食材！</button>
-  <p id="result"></p>
+  <div>
+    <button onclick="rollSlot('slot1')">抽食材 1</button>
+    <button onclick="rollSlot('slot2')">抽食材 2</button>
+  </div>
+  <div class="result" id="result"></div>
 
-  <!-- 加上版本號防止快取 -->
-  <script src="script.js?v=1.1"></script>
+  <script src="script.js?v=1.2.1"></script>
 </body>
 </html>
